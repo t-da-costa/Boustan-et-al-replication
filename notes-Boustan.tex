@@ -1,0 +1,249 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\usepackage{textcomp}
+\usepackage{mathcomp}
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{hyperref}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Notes on Boustan et al., The eﬀect of natural disasters on economic activity in US counties: A century of data}
+%\author{}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Main points}
++ 100 natural disasters/year, 1918-2012, county level data. 
+\begin{itemize}
+    \item They increase net out-migration rates by 1.5 p.p. during a decade and decrease housing prices by $[2.5 ; 5]$\%.
+    \item Economic response: falling local productivity and labor demand.
+    \item Increase of the migration response to milder events over time. 
+    \item If a disaster convey more information about future risk, the migration response is stronger.
+\end{itemize}
+
+\section{Paper}
+More economic activity clusters along the coasts, which are more exposed to natural disasters.
+
+\subsection{Idea}
+Aggregation of annual disaster by decades allows to explore their effect on local economies $\to$ wages, housing prices and rents, net migration to another area.
+\begin{itemize}
+    \item Destruction of productive capital.
+    \item Disruption of supply chains.
+    \item Loss of the housing stock. 
+    \item Generating unanticipated disamenities for consumers.
+\end{itemize}
+
+The destruction issued by a disaster is also suggested to potentially change the local economy equilibrium, potentially from an inefficient one established through path dependence to a more efficient one $\to$ \textit{(a kind of literal creative destruction)}. Works for San Francisco and Boston with urban fires (late XIX - early XX) $\to$ in growing area, natural disasters could encourage population growth. 
+
+Authors argue that low productivity places can retain inefficiently high population levels for decades because of the existence of a long-lived housing stock. The equilibrium reset happens through a lowered population if enough houses are destroyed after the disaster (because it would cause out-migration) $\to$ slow-population growth places might see higher out-migration after damages from an extreme event. \\
+
+The climate macroeconometrics literature that use cross-country panel regression is not very convincing: they find results ranging from near-recovery to long-lasting effects of extreme events on GDP. Analyzing a single country with institutional and geographic controls elicit long-lasting effects of natural disasters on local economies.
+
+Examining all disaster types (not just hurricanes) over a very long historical period allows to look at a broader range of effects than the usual extreme events consideration. \\
+
+Disasters with more new information about the increased likelihood of a future disaster in the area will increase the migration response. A disaster may convey more new informations if it strikes an place that has previously faced a lower extreme events risk. \\
+
+\subsection{Questions}
+What is the effect of natural disasters on the local economy? Reducing firm productivity, destroying housing stock, diminishing consumer amenities, shocking a place out of its equilibrium. For residents, changing their expected future risk of disasters.
+
+\subsection{Methods}
+Disasters: Flood, winter storm, hurricane, tornado, forest fire, other disasters. They exclude disasters caused by human activities, and include drought in the latter category. $\to$ \textit{However, the table 19 in the appendix include them, and find a surprising significant positive effect on migration rate. They justify the exclusion of drought by considering it as a policy decision of water use. This does not sound very convincing, as at least forest fires could be associated with local environmental policies, as in forest management}. \\
+
+Floods are tornado are 70\% of the +10 000 total disasters. Coastal and more populated counties faces more severe disasters (see appendix table 1). They control for county population by decade. On the countrary, counties with numerous lake or on high altitude are less exposed to disasters. \\
+
+Severe disasters are those with 25+ deaths, the median count for disasters with known fatality counts. 151 are presents in the sample, which is 1.5\% of the total disasters. 
+
+Spatial heterogeneity: 30\% of counties experience a severe disaster in a decade, with a severity dependent on the level of economic development.To avoid a potential endogeneity, they define a fatality threshold rather than counting deaths, to moderate this economic-dependent effect. \\
+
+\begin{itemize}
+    \item Hurricanes: Florida and the Gulf of Mexico \textit{(now Gulf of America)}
+    \item Winter Storms: North-Eastern states
+    \item Tornadoes: Midwest
+    \item Floods: Mississippi River
+    \item Fires and earthquakes: California
+\end{itemize}
+
+\subsubsection{Data}
+Disaster: place, date (month and year), type, number of deaths.
+\begin{itemize}
+    \item \href{https://www.census.gov/data.html}{Census Bureau}.
+    \item \href{https://netmigration.wisc.edu/}{WISC}. Five-year age-specific net migration data by decades, sex and race (1950-2020). There is an adjustment for birth, mortality and immigration from abroad is also taken into account. 
+    \item American National Red Cross for 1920 - 1964 disaster data.
+    \item Use of archival records in National Archives II at College Park, MD, for 1950 - 1964 disaster data.
+    \item \href{https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2}{FEMA}: Disaster declarations summaries, 1953-2019, 1964 for county data. $\to$ states politically important for the president are more likely to receive a declaration and more funds. Authors claim that their results are not being driven by this bias, and that the estimated effect of severe disasters is robust to the definition of severe. Mild natural catastrophes could be politically manipulated, but the lagest have all received federal disaster designations. \textit{While we agree with the fact that higher rate of disaster declaration might encourage higher flows of federal funds, it does not seem obvious that it would lead to in-migration. The justification that the political component of disaster declaration would bias against out-migration is not very satisfying. One could argue that more federal funds could help people keep the bare minimum in order to survive these events, and then move out with more ease because of the help they received.}
+
+    Also, FEMA disaster declaration process depends on a presidential decision, after the state determined that the damages exceeded their resources. The econometric analysis accounts for the state effects. They control in table 17 (appendix) the effect of a disaster on out-migration when the governor and the president have the same party. $\to$ \textit{They argue that disaster declaration driven by political considerations should lead to less out-migration, because of the overdeclaration compared to the events importance. Then, they find no relationship between party and disaster, but only because the coefficients of their regression are not significant. Again, the level of proof borne by this analysis might not be enough to rule out the possibility of a political effect.}
+    
+    Accounting for state fixed-effect in the graphical representation give a more accurate picture of the disaster effects. 
+
+    \textit{They use threshold sentitivity analysis to check for the robustness of a mild extreme event declaration, but again, it is not very convincing, compared to a situation where the disaster would be characterized by scientifical data.}
+    \item \href{https://www.nhgis.org/}{National Historical Geographic Information System}. Population, poverty rates, family income (proxy for wages), housing stocks, house values by county (expressed in the paper in 1982-1984 dollars), 1970-2010.
+    \item \href{https://www.emdat.be/}{EM-DAT}. Fatalities (for 10+ deaths).
+    \item "employment growth rate from IPUMS data using industrial composition and national employment trends (see equation 2); weights are based on county employment by industry in 1930."
+\end{itemize}
+
+Time series of disasters: 1920. 
+
+Effect of disasters on migration: 1930 (availability of the net migration by county data).
+
+Acceleration in disaster declarations since 1990s (500 country-level events/year during the XX\textsuperscript{th} century, 1500 by the 2000s), mostly because of winter storms and hurricanes.
+
+\subsubsection{Variables}
+Assumptions: 
+\begin{itemize}
+    \item each county is considered as a separate economy subject to a location specific-shock on date $t$. Aggregating would put too much weight on heavily populated urban areas.
+    \item Controlling for counties population (to absord for the higher number of death in more populated counties) leads to qualitatively similar results.
+    \item damages don't have long-term effects on birth rates or death rates over a decade. 
+\end{itemize}
+
+One disaster can have multiple declarations if it affects multiple counties, and therefore be double-counted $\to$ \textit{how does this affect the results? Largest events matters more in the given analysis. Local migration response might push people further if a whole region is affected. Is the migrating distance captured?}
+
+Observed variables: 
+\begin{itemize}
+    \item Economic outcomes within counties
+    \item Before and after the disaster.
+    \item Relative to counties that did not experience a disaster in the decade.
+\end{itemize}
+
+Assumption: the presence of a disaster in a particular decade and other local economic changes do not coincide.
+
+Controls: county-specific trends (\textit{e.g.} distance to the coast). 
+
+\textit{Is there a control for other migration factors?} \\
+
+Variables to distinguish the strength of the damages on local economies: 
+\begin{itemize}
+    \item Local wages
+    \item Housing prices
+    \item Net migration
+\end{itemize}
+
+\subsubsection{Theoretical framework}
+{Damages on Natural capital} $\to$ {less labor demand} (\textit{is it empirically true? Could the loss in one sector be compensated in others?})$\to$ {lower wages} $\to$ {out-migration} $\to$ lower home prices.
+
+$\to$ if disasters result in extensive rebuilding projects, it can increase labor demand, population and housing prices. Authors \textbf{estimate the net effect of disasters after those potential reconstruction effects}.
+
+They note that the price effect of housing will be strongest for the poor, who are more sensitive to housing prices and can trade off a higher real income for higher disaster risks. \\
+
+{Damages on local amenities} (depends on residents anticipation -- full anticipation = no effect) $\to$ {out-migration} $\to$ lower home prices $\to$ {potential increase in wages to attract workers back}. 
+
+\textit{Assumption to verify: if disasters contains no new information about future disaster risk, there will be no effect on migration}. \\
+
+{Damages on the housing stock} $\to$ higher home prices (dependent on the demand for living in the area and the housing stock) $\to$ potential reconstruction (and more long-lasting regulation on land-use) $\to$ home price variation.
+
+$\Longrightarrow$ \textbf{Data on housing prices taken from the Censuses of Population and Housing are decadal, and therefore do not capture the short-term fluctuations in housing prices.} \\
+
+Looking at a single country allows to control for institutional and geographic features. 
+
+\subsection{Main Results}
+Severe disaster effects over a decade, after any rebuilding, new investments, or disbursement of disaster relief funds:
+\begin{itemize}
+    \item Lower family income.
+    \item Bigger migration rate.
+    \item Lower housing prices.
+\end{itemize}
+$\Longrightarrow$ it implies a reduction in firm productivity, hence lower rages, which feed out-migration and the decrease of housing prices. \textit{What if indeed the lower housing prices attract more people, as it might be suggested by the increase in poverty rates?} \\
+
+Future disasters (\textit{i.e.} that will occur on the following decade) do not have effect on present out-migration: they check for this case by using lags and lead of the severity variable, which are not statistically significant. \\
+
+"A disaster that is fully anticipated, and thus already built into a residents decision to locate in an area, should have no effect on migration." $\to$ \textit{Unfortunately, people are not rational agent with perfect anticipation.}. What are the different reactions between high vs low risk of disaster activity?
+
+Hypothesis:
+\begin{itemize}
+    \item Rare events in very low risk areas: idiosyncratic shock, no effect on expectations.   
+    \item New disasters in low underlying risk areas: convey new information about future disaster risk.
+    \item New disasters in high underlying risk areas: no new information, no effect on migration.
+\end{itemize}
+
+Results:
+\textbf{Estimation of a fixed risk exposure for the full century at the county level with a propensity score based on geographic characteristics} (see table 4). $\to$ No evidence of a differential migration response to disasters in high vs low risk areas. \\
+
+Local responses to disaster events increased after 1980, along the increase in extreme events frequency. "Perhaps because residents infer that each event is associated with a higher risk of future disasters".
+
+Gain in sensitivity to less damaging natural disasters in time, which might attest a gain in information about future disaster risk, conveyed by the growing frequency of disasters over time $\to$ \textit{Couldn't we consider that people know about climate change and its worsening?}.
+
+Before the FEMA (1973, independent agency in 1978), the federal response was on a case-by-case basis. However, there is no effect of FEMA payments on out-migration (appendix table 7). \\
+
+No shock out of inefficient equilibria in productive area (low density of housing, inefficient mix of commercial and residential space): "we would expect a stronger out-migration response to disasters in slow-growing areas compared to areas that were experiencing faster economic or population growth" $\to$ \textit{but if the prior equilibrium is inefficient, should the analysis focus on the potential changes in growth speed before and after the natural damages, eventually accompanied with less net out-migration?}. Local productivity is defined by the employment growth equation. A regression with population growth has also been performed. Sample split in subsamples below and above the median to study "low vs. high growth area". 
+
+They actually find that, taking into account the interaction of high growth area and natural disaster, stronger out-migration emerges from high-growth areas (high rate of employment or high populationn growth). Their hypothesis on shocking inefficient equilibira does not work. They suppose that high-growth places are more encline to respond with higher net-migration because of the people's mobility in the region. \textit{It makes more sense: people in economically healthier regions can move out easily if a strong extreme event strikes}. Also, because they are often in the area for fewer years on average, the authors claim that they have more potential for learning new information about their environment. \textit{They might also have less emotional attachment to a place, which facilitate the mobility}. \\
+
+The migration response to one severe (\textit{i.e.} 25+ deaths, the median value for disasters with known fatality counts) natural disaster is around half as large as the estimated migration effect of a one st.d. negative shock in local employment growth. 
+
+Median housing prices fall by $[2.5 ; 5]$\% after a severe natural disaster, similarly as a response to a 5\% negative shock in test scores in school. $\to$ \textit{why the comparisons? What is the message behind it? Is it for policy making?} \\
+
+Authors don't find that out-migration is a response to rising housing prices that would follow the destruction of the housing stock. At the decadal level, the housing stock adjusts to follow population variation.
+
+The falling demand for living in areas hit by natural disasters is not due to declines in local amentiies. \\
+
+They find that extreme events increases the local poverty rate by 0.8 percentage points (\textit{which is a very low effect, as every measured effect in this study actually}), and because of the regression framework, they cannot draw any causality from this result. Hypothesis for an explanation of the phenomenon: Poverty rates "increase" because of
+\begin{itemize}
+    \item Out-migration of households above the poverty line(?)
+    \item In-migration of people under this line, in response to lower housing prices(?)
+    \item natural disasters that increases the probability that the existing population falls into poverty(?)
+\end{itemize}
+
+"lower demand due to persistent natural disasters leads to falling rents and acts as a poverty magnet" $\to$ \textit{this is a very strong statement compared to the level of proof, especially of causality, that the authors provide}. \\
+
+Results are robust to alternative fatality thresholds, but stronger net out-migration emerges from the most sever disasters (500+ deaths) $\to$ \textit{this exhibit a non-linear behavior in migration associated with the severity of the extreme events}.
+
+When \textbf{instrumenting the disaster exposure with historical available climate variables}, the association between severe disasters and out-migration holds. \\
+
+Floods "attract" people, storm and tornados have no effect on migration flows. \textit{As suggested by the authors, would this rather better reflect the state of the local economy rather than a direct effect of the disaster? They suggest that area prone to flooding receive new infrastructures. Maybe Mississippi and New Orleans have particularities that are not captured in the model?} \\
+
+The authors try to compare migration rate within counties before and after a strike compared to counties that did not experience a disaster. \textit{However, they don't use a DiD approach, which would have been more appropriate to determine causality through quasi-experiment rather than a simple correlation through regression. They claim that they check for parallel trends but only via the addition of county-specific linear trends as control variables}. \\ 
+
+
+\subsection{Robustness check and limits}
+\textit{Good idea:} to take into account improvment in buildings and robustness against natural disasters, they use an alternative specification where the disaster severity is defined as a disaster with above media fatalities for a given decade. They find that the results are robust to this alternative definition. \\
+
+Disaggregating by age categories, middle age responds more strongly to disasters, with a higher propensity to migrate. It declines as people get older (they have a lower mobility). \\
+
+They also control for the construction of new infrastructures after a disaster, which could influence counties' dynamics and therefore authors analysis, especially if the extreme event occurs at the beginning of the decade. \\
+
+\textit{Because they focus on every declared extreme events, it might affect the strenght of their estimates, compared to studies that only look at the most extreme disasters, e.g. Hurricane Katrina.}
+
+Their paper is still useful as it installs the idea of a global positive relationship between natural disasters and long-term out-migration, which is amplified if the area has a growing economy and by the increase in frequency of those disasters.
+
+
+\section{Econometric analysis}
+\subsection{In the paper}
+County $i$, state $j$, decade $t$ (1940 - 2010).
+
+\begin{align*}
+    Y_{ijt} = \mu_i + \xi_t + \beta_1 D_{ijt} + \beta_2 \Delta_{\text{employment}_{ijt}} + \beta_3 (X_ij \cdot t) + U_{ijt}
+\end{align*}
+
+\begin{itemize}
+    \item $Y_{ijt}$: outcome variable, that includes the net migration rate from $t-1$ to $t$, the log of median housing prices in year $t$, the poverty rate in $t$.
+    \item $D_{ijt}$ number and severity of disasters, by type, from $t-1$ to $t$ $\to$ \textit{they say a vector, but how do they sum it in a single variable?}
+    \item $\beta_1$ is the coefficient of interest. It compares counties that experienced a severe disaster in decade $t$ to those that did not.
+    \item $\mu_i$ country fixed effects.
+    \item $\xi_t$ decade fixed effects.
+    \item $X_{ij} \cdot t$ state-specific linear time trends. Authors also account for the interaction between the state-specific linear time trends and the initial county population because of the spatial heterogeneity in natural disaster exposure and capacity of declaration.
+    \item $\Delta_{\text{employment}_{ijt}} = \frac{\sum_{l = 1}^L \alpha_{\text{employment}_{i,l, t = 1930}} \cdot~\gamma_{l,t}}{\alpha_{\text{employment}_{l, t = 1930}}}$, with $\gamma_{t,l}$ the national growth rate in employment for the industry $l$ and decade $t$ and $\alpha_{\text{employment}_{l, t = 1930}}$ is the share of workers in county $i$ who worked in industry $l$ in the base year 1930. Because unemployment data is not available at the county level and might be endogenous, they build "time-varying economic conditions" with initiation industrial composition at the county level with national employment trends. $\to$ \textit{this might completely fail to capture structural changes in the economy, e.g. a strong tourism development on specific places that were not visited a century ago, the spatial industry, etc.}
+\end{itemize}
+
+Standard errors account for spatial and temporal dependence. Authors assume that spatial dependence is linearly decreasing in distance from the center of the county up to 1000 km.
+
+They also tried to include county-specific fixed effects, lags, changing population rather than initial. The major control to take into account in the inclusion of state-specific linear time trends.
+
+\subsection{To do}
+Reproduce figure 1 (or even Appendix fig. 1 to break it down by disaster type) and table 1 (disaster by type and severity, declined by count, average by county-decade). Figure 2 (or even better, appendix fig. 3) for data representation?
+
+Sum of county-level disaster counts by year and source between 1918 and 2012.
+
+Do the instrumentation with historical climate variables(?)
+\end{document}

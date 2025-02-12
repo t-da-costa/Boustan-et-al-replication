@@ -10,8 +10,8 @@ https://plmlatex.math.cnrs.fr/2696184128kzjpphtwkmrb
 (context and interest of the exercise / dans quelle littérature s'inscrit le papier)
 
 3. Critical Review
-- Question
-- Methods 
+- Questions
+- Methods
 - Main Results
 - Limits
 
