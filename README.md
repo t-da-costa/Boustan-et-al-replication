@@ -1,11 +1,17 @@
 # Boustan-et-al-replication
 A short review and statistical replication of Boustan, L. P., Kahn, M. E., Rhode, P. W., &amp; Yanguas, M. L. (2020). The effect of natural disasters on economic activity in US counties: A century of data. Journal of Urban Economics, 118, 103257.
 
-0. Introduction (context and interest of the exercise / dans quelle littérature s'inscrit le papier)
+## French CNRS "overleaf"
+https://plmlatex.math.cnrs.fr/2696184128kzjpphtwkmrb 
 
-2. Critical Review
-- Question
-- Methods 
+## Table of contents
+0. Introduction
+
+(context and interest of the exercise / dans quelle littérature s'inscrit le papier)
+
+1. Critical Review
+- Questions
+- Methods
 - Main Results
 - Limits
 
@@ -17,4 +23,5 @@ A short review and statistical replication of Boustan, L. P., Kahn, M. E., Rhode
 - Discussion
 
 3. Conclusion
+
 Recap + ouverture sur d'autres méthodes / d'autres approches à la question de recherche
