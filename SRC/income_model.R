@@ -133,3 +133,47 @@ income_model <- plm(median_income ~ is_fire + is_flood + is_tornado + is_hurrica
 
 # Résumé des résultats
 summary(income_model)
+
+#########
+# Tests #
+#########
+
+model_fe <- plm(median_income ~ is_fire + is_flood + is_tornado + is_hurricane + is_snowstorm + disasters_count, 
+                    data = panel_data_plm, 
+                    model = "within")
+
+model_re <- plm(median_income ~ is_fire + is_flood + is_tornado + is_hurricane + is_snowstorm + disasters_count, 
+                data = panel_data_plm, 
+                model = "random")
+
+# Test de Hausman
+# Compare les modèles à effets fixes et aléatoires
+phtest(model_fe, model_re)
+
+# Test de Breusch-Pagan pour les effets aléatoires (test d'hétéroscédasticité)
+# Vérifie si les effets aléatoires sont significatifs
+plmtest(model_fe, type = "bp")
+
+# Test de Wooldridge pour l'autocorrélation des résidus dans les panels
+# Test pour la présence d'autocorrélation dans les données en panel
+pwartest(model_fe)
+
+# Test de Hétéroscédasticité avec Breusch-Pagan
+# Vérifie l'hétéroscédasticité des erreurs dans le modèle
+bptest(model_fe)
+
+# Test de normalité des résidus (Kolmogorov-Smirnov)
+# Vérifie si les résidus suivent une distribution normale
+ks.test(residuals(model_fe), "pnorm")
+
+# Calcul des VIF (Variance Inflation Factor)
+# Vérifie les problèmes de multicolinéarité dans le modèle
+vif(model_fe)
+
+# Test RESET pour la spécification du modèle
+# Test pour voir si le modèle est bien spécifié (ajout de termes quadratiques)
+resettest(model_fe)
+
+# Erreurs standard robustes de Newey-West
+# Utilise les erreurs standard robustes de Newey-West pour ajuster les erreurs standard
+coeftest(model_fe, vcov = vcovNW(model_fe))
